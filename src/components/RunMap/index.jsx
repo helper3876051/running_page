@@ -2,6 +2,7 @@ import MapboxLanguage from '@mapbox/mapbox-gl-language';
 import React, { useRef, useCallback } from 'react';
 import ReactMapGL, { Layer, Source, FullscreenControl } from 'react-map-gl';
 import useActivities from 'src/hooks/useActivities';
+
 import {
   MAP_LAYER_LIST,
   IS_CHINESE,
@@ -45,6 +46,7 @@ const RunMap = ({
     },
     [mapRef]
   );
+  
   const filterProvinces = provinces.slice();
   // for geojson format
   filterProvinces.unshift('in', 'name');
